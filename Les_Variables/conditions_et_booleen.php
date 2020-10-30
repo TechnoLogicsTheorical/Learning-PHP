@@ -138,17 +138,17 @@ echo "\n\n Passage au code interactif ! \n\n";
 //     echo "\n Oups, vous n'avez pas bien réviser :/";
 // }
 
-$action = (int)readline("VVVVV Entrez une action à faire : [1: Attaquer | 2: Défendre | 3: Passer mon tour VVVV\n");
+// $action = (int)readline("VVVVV Entrez une action à faire : [1: Attaquer | 2: Défendre | 3: Passer mon tour VVVV\n");
 
-if ($action === 1) {
-    echo 'J\'attaque';
-} elseif ($action === 2) {
-    echo 'Je défend';
-} elseif ($action === 3) {
-    echo 'Je passe mon tour';
-} else {
-    echo 'Commande inconnue';
-}
+// if ($action === 1) {
+//     echo 'J\'attaque';
+// } elseif ($action === 2) {
+//     echo 'Je défend';
+// } elseif ($action === 3) {
+//     echo 'Je passe mon tour';
+// } else {
+//     echo 'Commande inconnue';
+// }
 
 /* 
     Voyons, un autre cas de conditons, nous permettant de faire des actions selons des cas, car cela peut etre
@@ -163,4 +163,45 @@ if ($action === 1) {
     ou de l'expression que nous souhaitons avoir ! 
     
     Et on fini notre cas par un (break;) pour dire que notre instruction de blog e
+*/
+
+// switch ($action) {
+//     case 1:
+//         echo 'J\'attaque !';
+//         break;
+//     case 2:
+//         echo 'Je défend';
+//         break;
+//     case 3:
+//         echo 'Je passe mon tour';
+//         break;
+//     default:
+//         echo 'Commande inconnue';
+//         break;
+// }
+
+/*
+    Maintenant, nous voir et explorer les operateurs logiques, parce qu'une condition peut etre tres
+    simple comme nous venons de le voir mais parfois nous pouvons avoir des opérations un peu plus complexe
+    par exemple on peut demander à l'utilisateur quelle heure, il est, et meme temps demander si il est ouvert
+
+    Nous allons définir donc une variable stockant l'heure, une fois cela nous allons créer une condition
+    qui devra checker, si l'heure qui a été rentrer correspond à l'heure d'ouverture
+*/
+
+$heure = (int)readline("Entrez une heure : ");
+
+if (($heure >= 9 AND $heure <= 12) OR ($heure >= 14 AND $heure <= 19)) {
+    echo 'Le magasin est actuellement ouvert';
+} else {
+    echo 'Le magasin est fermée';
+}
+
+/* 
+    Pour comprendre, les conditions il faut savoir que ($heure >= 9) cette expression retourne une valeur de type
+    booleene dans la condition, si l'heure rentrée par notre fonction (readline) est comme valeur 8, l'operation
+    arithmétique de notre condition va être evaluée à faux 
+
+    Il existe operateur permettant d'inverse la tendance au niveau d'une condition
+    C'est l'operateur de difference (!)
 */
