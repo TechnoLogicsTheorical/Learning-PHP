@@ -86,5 +86,24 @@
     
     Le probleme c'est que si nous regardons les parametres dans notre url, nous avons aucun parametres dans cette
     derniere et que nous inspectons notre variable ($_GET), nous verrons que notre tableau est vide
-    
+
+    Donc, voyons la deuxieme methode d'envoie de formulaire (POST), qui nous permet d'envoyer les données 
+    également comme la methode (GET) mais à l'instart de cette methode, nous avons les donnes qui ne sont pas
+    afficher dans l'url, mais envoier en interne par rapport a cette derniere.
+*/
+
+/*
+    Nous allons voir comment gérer les données un peu plus complexe, a savoir les checkbox, qui ont un comportement
+    un peu particulier pour cela, nous allons creer un formulaire de composition de glace
+
+    Une fois, nos balises 'input', que nous cochons à l'aide de la case, nous avons observons que dans notre
+    variable super GLOBALE, la données avec la valeur saisie !
+
+    Par contre, si l'utilisateur coche 2 parfum (Fraise et vanille), on voit une seule des valeurs, qui à ecraser la
+    valeur précedente et sera toujours la dernière valeur qui le fera
+    Et ce probleme et dut au nom du champs utilisée !
+    Qui est le meme dans nos 3 balises 'input' = (parfum) ... Pour palier à ce soucis, si vous savez qu'un champs à
+    à plusieurs valeurs, il faudra utiliser un nom de champs avec des (nom[]), ce qui a le comportement de creer
+    un tableau, et ajoutera la valeur dans ce dernier
+
 */
