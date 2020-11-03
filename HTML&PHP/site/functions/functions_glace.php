@@ -18,11 +18,4 @@
             <input type="radio" name="{$nameChamp}" value="$valueChamp" $attributes>
         HTML;
     }
-
-    function dumpInHTML(?string $message = "DEBUG", $variable) {
-        echo '<pre>';
-        echo "$message <br>";
-        echo var_dump($variable);
-        echo '</pre>';
-    }
 ?>

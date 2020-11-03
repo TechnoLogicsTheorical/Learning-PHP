@@ -1,11 +1,11 @@
-<?php require_once('menu/menu_functions.php'); ?>
+<?php require_once 'functions/functions_menu.php'; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
-        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="author" content="The Creative Dev">
         <meta name="generator" content="Jekyll v4.1.1">
         <title>
             <?php if (isset($title)) : ?>

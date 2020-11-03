@@ -16,4 +16,3 @@
             createNavItem('/index.php','Accueil', $attributeClass) .
             createNavItem('/contact.php','Contact', $attributeClass);
     }
-?>
